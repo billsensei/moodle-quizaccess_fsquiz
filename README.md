@@ -1,5 +1,8 @@
 # Fullscreen Lockdown Quiz (quizaccess_fsquiz)
 
+## Warning! 
+### ** This is still in Beta, please use in testing environments only!**
+
 A Moodle 5.1 quiz access rule that runs an attempt in a locked-down fullscreen popup and
 **immediately auto-submits it, as-is, the moment the student leaves that window** — another
 tab, another application, exiting fullscreen, or losing focus for any other reason.
