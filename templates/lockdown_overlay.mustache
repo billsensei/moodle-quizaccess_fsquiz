@@ -1,0 +1,38 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template quizaccess_fsquiz/lockdown_overlay
+
+    Full-page overlay shown on the attempt page before fullscreen lockdown begins. A
+    genuine click on the button inside is required so the page can call the Fullscreen
+    API from within a real user gesture.
+
+    Context variables required: none.
+
+    Example context (json):
+    {}
+}}
+<div class="quizaccess-fsquiz-overlay" role="alertdialog" aria-modal="true"
+     aria-labelledby="quizaccess-fsquiz-overlay-title">
+    <div class="quizaccess-fsquiz-overlay-content">
+        <h2 id="quizaccess-fsquiz-overlay-title">{{#str}} lockdowntitle, quizaccess_fsquiz {{/str}}</h2>
+        <p>{{#str}} lockdowninstructions, quizaccess_fsquiz {{/str}}</p>
+        <button type="button" class="btn btn-primary" data-action="quizaccess-fsquiz-begin">
+            {{#str}} beginattempt, quizaccess_fsquiz {{/str}}
+        </button>
+    </div>
+</div>

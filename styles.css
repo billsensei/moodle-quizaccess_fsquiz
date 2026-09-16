@@ -1,0 +1,51 @@
+/* This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.quizaccess-fsquiz-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+}
+
+.quizaccess-fsquiz-overlay-content {
+    max-width: 32rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #1a1a1a;
+    text-align: center;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.quizaccess-fsquiz-overlay-content h2 {
+    margin-top: 0;
+}
+
+.quizaccess-fsquiz-overlay-content button {
+    margin-top: 1rem;
+}
+
+/* The quiz-secure page layout already hides most navigation; this just makes sure the
+   lockdown body class does not accidentally leave scrollbars/margins that would make the
+   window feel less "locked down" while the overlay above is showing. */
+body.quizaccess-fsquiz-lockdown {
+    overflow-x: hidden;
+}
